@@ -27,8 +27,8 @@ git clone --depth=1 https://github.com/Lienol/openwrt-package
 rm -rf ../lean/luci-app-kodexplorer
 
 # Add immortalwrt's Packages
-git clone --depth=1 -b openwrt-18.06 https://github.com/immortalwrt/packages
-git clone --depth=1 -b openwrt-18.06-k5.4 https://github.com/immortalwrt/luci
+git clone --depth=1 -b openwrt-23.05 https://github.com/immortalwrt/packages
+git clone --depth=1 -b openwrt-23.05 https://github.com/immortalwrt/luci
 cp -r ../luci/applications/luci-app-adguardhome ../package/lean//luci-app-adguardhome
 
 # Add luci-app-passwall
@@ -61,7 +61,7 @@ git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
 git clone --depth=1 https://github.com/lisaac/luci-lib-docker
 
 # Add luci-theme-argon
-git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
+git clone --depth=1 -b master https://github.com/jerrykuku/luci-theme-argon
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 rm -rf ../lean/luci-theme-argon
 
