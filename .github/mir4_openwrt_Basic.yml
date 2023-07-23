@@ -1,5 +1,6 @@
 
 
+
 name: Mir4 Openwrt Basic
 
 on:
@@ -24,6 +25,7 @@ env:
   UPLOAD_WETRANSFER: true
   UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
+
 
 
 jobs:
