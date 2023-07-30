@@ -30,7 +30,7 @@ env:
 
 jobs:
   build:
-    runs-on: macubuntu
+    runs-on: self-ubuntu
     #runs-on: ubuntu-18.04
 
     steps:
