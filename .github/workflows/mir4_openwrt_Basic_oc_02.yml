@@ -1,7 +1,7 @@
 
 
 
-name: Mir4 Openwrt Basic OC 02
+name: Mir4 Openwrt Basic (OC 02)
 
 on:
   repository_dispatch:
