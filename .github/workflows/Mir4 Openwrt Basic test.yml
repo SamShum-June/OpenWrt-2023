@@ -28,12 +28,13 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
+  Run_os: macubuntu
 
 
 
 jobs:
-  build:
-    runs-on: macubuntu
+  checkout_Env_build:
+    runs-on: "$Run_os"
 
     steps:
     - name: Checkout
@@ -51,7 +52,10 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
-
+ 
+  clone_source_Load_custom_up_feeds_build:
+    runs-on: "$Run_os"
+    steps:
     - name: Clone source code
       working-directory: /workdir
       run: |
