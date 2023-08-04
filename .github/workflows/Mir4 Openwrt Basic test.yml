@@ -32,7 +32,7 @@ env:
 
 
 
-jobs:
+1_jobs:
   checkout_Env_build:
     runs-on: "$Run_os"
 
@@ -52,7 +52,8 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
- 
+
+2_jobs:
   clone_source_Load_custom_up_feeds_build:
     runs-on: "$Run_os"
     steps:
