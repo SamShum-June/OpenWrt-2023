@@ -33,7 +33,8 @@ env:
 
 jobs:
   build:
-    runs-on: macubuntu
+    #runs-on: macubuntu
+    runs-on: ubutnu-20.04
 
     steps:
     - name: Checkout
