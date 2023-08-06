@@ -28,12 +28,12 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
-  runners-computer: macubuntu
+  
 
 
 jobs:
   build:
-    runs-on: "$runners-computer"
+    runs-on: macubuntu
     
 
     steps:
