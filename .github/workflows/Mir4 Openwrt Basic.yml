@@ -28,13 +28,13 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
-
+  runners-computer: macubuntu
 
 
 jobs:
   build:
-    runs-on: macubuntu
-    #runs-on: ubutnu-20.04
+    runs-on: "$runners-computer"
+    
 
     steps:
     - name: Checkout
