@@ -33,7 +33,7 @@ env:
 
 jobs:
   build:
-    runs-on: macubuntu  #vbubuntu
+    runs-on: ubuntu-20.04 #macubuntu  #vbubuntu
     
 
     steps:
