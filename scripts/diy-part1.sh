@@ -18,8 +18,8 @@ sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.
 sed -i '$a src-git diy https://github.com/CCnut/feed-netkeeper.git;LUCI-LUA-UCITRACK' feeds.conf.default
 
 # Add luci-theme-argon
-git clone --depth=1 -b master https://github.com/jerrykuku/luci-theme-argon
-rm -rf ../lean/luci-theme-argon
+#git clone --depth=1 -b master https://github.com/jerrykuku/luci-theme-argon
+#rm -rf ../lean/luci-theme-argon
 
 # Svn checkout packages from immortalwrt's repository
 git clone --depth=1 https://github.com/immortalwrt/packages -b openwrt-23.05 packages
