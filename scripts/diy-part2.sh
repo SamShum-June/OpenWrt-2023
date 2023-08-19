@@ -15,7 +15,7 @@ sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_genera
 
 # Add luci-app-ssr-plus
 #pushd package/lean
-git clone --depth=1 https://github.com/fw876/helloworld
+#git clone --depth=1 https://github.com/fw876/helloworld
 #popd
 
 # Clone community packages to package/community
@@ -23,12 +23,12 @@ mkdir package/community
 pushd package/community
 
 # Add Lienol's Packages
-git clone --depth=1 https://github.com/Lienol/openwrt-package
-rm -rf ../lean/luci-app-kodexplorer
+#git clone --depth=1 https://github.com/Lienol/openwrt-package
+#rm -rf ../lean/luci-app-kodexplorer
 
 # Add immortalwrt's Packages
-git clone --depth=1 -b openwrt-23.05 https://github.com/immortalwrt/packages
-git clone --depth=1 -b openwrt-23.05 https://github.com/immortalwrt/luci
+#git clone --depth=1 -b openwrt-23.05 https://github.com/immortalwrt/packages
+#git clone --depth=1 -b openwrt-23.05 https://github.com/immortalwrt/luci
 #cp -r ../luci/applications/luci-app-adguardhome ../package/lean//luci-app-adguardhome
 
 # Add luci-app-passwall
