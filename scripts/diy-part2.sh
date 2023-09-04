@@ -15,12 +15,12 @@
 
 # Add luci-app-ssr-plus
 pushd package/lean
-git clone --depth=1 https://github.com/fw876/helloworld
+git clone --depth=1 https://github.com/SamShum-June/helloworld
 rm -rf ../lean/luci-app-naiveproxy
 popd
 
 # Add luci-app-passwall
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
+git clone --depth=1 https://github.com/SamShum-June/openwrt-passwall
 
 # Clone community packages to package/community
 #mkdir package/community
