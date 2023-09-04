@@ -11,24 +11,16 @@
 #
 
 # Uncomment a feed source
-#sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add feed sources
 sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
+sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
+sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
 
 
 # Svn checkout packages from immortalwrt's repository
 git clone --depth=1 https://github.com/immortalwrt/packages -b openwrt-23.05 packages
 git clone --depth=1 https://github.com/immortalwrt/luci -b openwrt-23.05 luci
-
-
-# Add luci-app-ssr-plus
-pushd package/lean
-git clone --depth=1 https://github.com/fw876/helloworld
-rm -rf ../lean/luci-app-naiveproxy
-popd
-
-# Add luci-app-passwall
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
 
 
