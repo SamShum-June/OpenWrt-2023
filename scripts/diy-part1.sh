@@ -23,4 +23,4 @@ sed -i '$a src-git passwall https://github.com/SamShum-June/openwrt-passwall' fe
 git clone --depth=1 https://github.com/immortalwrt/packages -b openwrt-23.05 packages
 git clone --depth=1 https://github.com/immortalwrt/luci -b openwrt-23.05 luci
 
-
+rm -rf package/lean/luci-app-naiveproxy
