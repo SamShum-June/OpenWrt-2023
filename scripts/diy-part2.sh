@@ -21,6 +21,7 @@ popd
 
 # Add luci-app-passwall
 git clone --depth=1 https://github.com/SamShum-June/openwrt-passwall
+git clone --depth=1 https://github.com/SamShum-June/helloworld
 
 # Clone community packages to package/community
 #mkdir package/community
@@ -31,9 +32,10 @@ git clone --depth=1 https://github.com/SamShum-June/openwrt-passwall
 #rm -rf ../lean/luci-app-kodexplorer
 
 # Add immortalwrt's Packages
-#git clone --depth=1 -b openwrt-23.05 https://github.com/immortalwrt/packages
-#git clone --depth=1 -b openwrt-23.05 https://github.com/immortalwrt/luci
-#cp -r ../luci/applications/luci-app-adguardhome ../package/lean//luci-app-adguardhome
+git clone --depth=1 https://github.com/immortalwrt/packages -b openwrt-23.05 packages
+git clone --depth=1 https://github.com/immortalwrt/luci -b openwrt-23.05 luci
+rm -rf package/lean/luci-app-naiveproxy
+cp -r ../luci/applications/luci-app-adguardhome ../package/lean//luci-app-adguardhome
 
 # Add luci-app-vssr <M>
 #git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
