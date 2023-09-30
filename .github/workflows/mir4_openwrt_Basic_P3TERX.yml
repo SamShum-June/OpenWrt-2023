@@ -34,7 +34,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04 #self-hosted
+    runs-on: self-hosted
     
 
     steps:
