@@ -11,17 +11,16 @@
 #
 
 # Modify default IP
-#sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
 
 # Add luci-app-ssr-plus
 pushd package/lean
-git clone --depth=1 https://github.com/SamShum-June/helloworld
+git clone --depth=1 https://github.com/SamShum-June/helloworld helloworld
 rm -rf ../lean/luci-app-naiveproxy
 popd
 
 # Add luci-app-passwall
-git clone --depth=1 https://github.com/SamShum-June/openwrt-passwall
-git clone --depth=1 https://github.com/SamShum-June/helloworld
+git clone --depth=1 https://github.com/SamShum-June/openwrt-passwall openwrt-passwall
 
 # Clone community packages to package/community
 #mkdir package/community
