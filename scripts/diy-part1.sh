@@ -29,6 +29,6 @@ rm -rf ./RELEASE_ZH.md RELEASE.md README_ZH.md README.md LICENSE .gitignore .git
 popd
 popd
 
-.
+
 
 
