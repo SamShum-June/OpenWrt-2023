@@ -21,7 +21,8 @@ rm -rf ./luci-app-naiveproxy
 ##popd
 
 # Add luci-app-passwall
-##git clone --depth=1 https://github.com/SamShum-June/openwrt-passwall openwrt-passwall
+#git clone --depth=1 https://github.com/SamShum-June/openwrt-passwall
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
 
 # Clone community packages to package/community
 #mkdir package/community
