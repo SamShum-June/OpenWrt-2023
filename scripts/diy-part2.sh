@@ -11,16 +11,16 @@
 #
 
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
+##sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
 
 # Add luci-app-ssr-plus
-pushd package/lean
-git clone --depth=1 https://github.com/SamShum-June/helloworld helloworld
-rm -rf ../lean/luci-app-naiveproxy
-popd
+##pushd package/lean
+##git clone --depth=1 https://github.com/SamShum-June/helloworld helloworld
+##rm -rf ../lean/luci-app-naiveproxy
+##popd
 
 # Add luci-app-passwall
-git clone --depth=1 https://github.com/SamShum-June/openwrt-passwall openwrt-passwall
+##git clone --depth=1 https://github.com/SamShum-June/openwrt-passwall openwrt-passwall
 
 # Clone community packages to package/community
 #mkdir package/community
@@ -31,10 +31,10 @@ git clone --depth=1 https://github.com/SamShum-June/openwrt-passwall openwrt-pas
 #rm -rf ../lean/luci-app-kodexplorer
 
 # Add immortalwrt's Packages
-git clone --depth=1 https://github.com/immortalwrt/packages -b openwrt-23.05 packages
-git clone --depth=1 https://github.com/immortalwrt/luci -b openwrt-23.05 luci
-rm -rf package/lean/luci-app-naiveproxy
-cp -r ../luci/applications/luci-app-adguardhome ../package/lean//luci-app-adguardhome
+##git clone --depth=1 https://github.com/immortalwrt/packages -b openwrt-23.05 packages
+##git clone --depth=1 https://github.com/immortalwrt/luci -b openwrt-23.05 luci
+##rm -rf package/lean/luci-app-naiveproxy
+##cp -r ../luci/applications/luci-app-adguardhome ../package/lean//luci-app-adguardhome
 
 # Add luci-app-vssr <M>
 #git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
