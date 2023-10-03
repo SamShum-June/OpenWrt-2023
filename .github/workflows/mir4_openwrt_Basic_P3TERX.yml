@@ -28,14 +28,13 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
-  action_com: ubuntu-20.04
   
 
 
 
 jobs:
   build:
-    runs-on: $action_com #self-hosted
+    runs-on: ubuntu-20.04 #self-hosted
     
     steps:
     - name: Checkout
