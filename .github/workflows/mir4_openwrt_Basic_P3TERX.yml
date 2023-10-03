@@ -9,7 +9,7 @@ on:
     inputs:
       ssh:
         description: 'SSH connection to Actions'
-        required: false
+        required: true #false
         default: 'false'
 
 env:
@@ -34,9 +34,8 @@ env:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-20.04 #self-hosted
     
-
     steps:
     - name: Checkout
       uses: actions/checkout@main
@@ -74,14 +73,14 @@ jobs:
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 
-    #- name: Load custom configuration
-    #  run: |
-    #    [ -e files ] && mv files openwrt/files
-    #    [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-    #    cat config/MIPS/Mir4-extra.config >> openwrt/.config
-    #    chmod +x $DIY_P2_SH
-    #    cd openwrt
-    #    $GITHUB_WORKSPACE/$DIY_P2_SH
+    - name: Load custom configuration
+      run: |
+        [ -e files ] && mv files openwrt/files
+        [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
+        cat config/MIPS/Mir4-extra.config >> openwrt/.config
+        chmod +x $DIY_P2_SH
+        cd openwrt
+        $GITHUB_WORKSPACE/$DIY_P2_SH
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
