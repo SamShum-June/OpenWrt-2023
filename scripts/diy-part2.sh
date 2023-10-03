@@ -14,9 +14,10 @@
 sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
 
 # Add luci-app-ssr-plus
-##pushd package/lean
+pushd package/feeds/luci
 ##git clone --depth=1 https://github.com/SamShum-June/helloworld helloworld
-##rm -rf ../lean/luci-app-naiveproxy
+git clone --depth=1 https://github.com/fw876/helloworld
+rm -rf ./luci-app-naiveproxy
 ##popd
 
 # Add luci-app-passwall
