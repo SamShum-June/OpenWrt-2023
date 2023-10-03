@@ -27,9 +27,7 @@ git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon
 pushd ./luci-theme-argon
 rm -rf ./RELEASE_ZH.md RELEASE.md README_ZH.md README.md LICENSE .gitignore .git .github
 popd
-cp -r ./luci-theme-argon
 popd
-
-
+ln -sf ../../../luci/themes/luci-theme-argon ./package/feeds/luci/
 
 
