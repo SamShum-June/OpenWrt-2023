@@ -28,7 +28,7 @@ pushd ./luci-theme-argon
 rm -rf ./RELEASE_ZH.md RELEASE.md README_ZH.md README.md LICENSE .gitignore .git .github
 popd
 popd
-mkdir ./package/feeds/luci
+mkdir -p ./package/feeds/luci
 ln -sf ../../../luci/themes/luci-theme-argon ./package/feeds/luci/
 
 
