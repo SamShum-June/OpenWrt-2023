@@ -29,10 +29,9 @@ git clone --depth=1 https://github.com/Lienol/openwrt-package
 rm -rf ../luci/luci-app-kodexplorer
 
 # Add immortalwrt's Packages
-##git clone --depth=1 https://github.com/immortalwrt/packages -b openwrt-23.05 packages
-##git clone --depth=1 https://github.com/immortalwrt/luci -b openwrt-23.05 luci
-##rm -rf package/lean/luci-app-naiveproxy
-##cp -r ../luci/applications/luci-app-adguardhome ../package/lean//luci-app-adguardhome
+git clone --depth=1 -b openwrt-23.05 https://github.com/immortalwrt/packages
+git clone --depth=1 -b openwrt-23.05 https://github.com/immortalwrt/luci
+cp -r ../luci/applications/luci-app-adguardhome ../package/lean//luci-app-adguardhome
 
 # Add luci-app-passwall
 #git clone --depth=1 https://github.com/SamShum-June/openwrt-passwall
@@ -71,9 +70,6 @@ git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
 
 # Add OpenAppFilter
 #git clone --depth 1 -b oaf-3.0.1 https://github.com/destan19/OpenAppFilter.git
-
-# Add luci-app-oled (R2S Only)
-#git clone --depth=1 https://github.com/NateLol/luci-app-oled
 
 
 

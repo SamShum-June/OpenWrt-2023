@@ -17,8 +17,8 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 
 # Svn checkout packages from immortalwrt's repository
-git clone --depth=1 https://github.com/immortalwrt/packages -b openwrt-23.05 packages
-git clone --depth=1 https://github.com/immortalwrt/luci -b openwrt-23.05 luci
+git clone --depth=1 -b openwrt-23.05 https://github.com/immortalwrt/packages
+git clone --depth=1 -b openwrt-23.05 https://github.com/immortalwrt/luci
 
 # Add luci-theme-argon
 pushd ./luci/themes
