@@ -14,24 +14,52 @@
 sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
 
 # Add luci-app-ssr-plus
-pushd package/feeds/luci
-##git clone --depth=1 https://github.com/SamShum-June/helloworld helloworld
-git clone --depth=1 https://github.com/fw876/helloworld
-rm -rf ./luci-app-naiveproxy
-popd
-
-# Clone community packages to package/community
-mkdir package/community
-pushd package/community
+pushd ./package/feeds
+##git clone --depth=1 https://github.com/SamShum-June/helloworld
+git clone --depth=1 https://github.com/fw876/helloworld helloworld
+rm -rf ./helloworld/luci-app-naiveproxy
 
 # Add Lienol's Packages
-git clone --depth=1 https://github.com/Lienol/openwrt-package
-rm -rf ../luci/luci-app-kodexplorer
+git clone --depth=1 https://github.com/Lienol/openwrt-package openwrt-package
+rm -rf ./openwrt-package/luci-app-kodexplorer
+
+# Clone community packages to package/community
+mkdir -p ./community
+pushd ./community
+popd
+
+# Add luci-app-dockerman
+rm -rf ./luci/luci-lib-docker
+rm -rf ./luci/luci-app-dockerman
+pushd ./community
+git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
+git clone --depth=1 https://github.com/lisaac/luci-lib-docker
+popd
+popd
+popd
+ln -sf ../../.././package/feeds/community/luci-lib-docker/collections/luci-lib-docker ./package/feeds/luci/
+ln -sf ../../.././package/feeds/community/luci-app-dockerman/applications/luci-app-dockerman ./package/feeds/luci/
+
+# Add luci-app-passwall
+pushd ./package/feeds/community
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
+popd
+popd
+popd
+popd
+popd
+ln -sf ../../.././package/feeds/community/openwrt-passwall/luci-app-passwall ./package/feeds/luci/
+
+
+
 
 # Add immortalwrt's Packages
-git clone --depth=1 -b openwrt-23.05 https://github.com/immortalwrt/packages
-git clone --depth=1 -b openwrt-23.05 https://github.com/immortalwrt/luci
-cp -r ../luci/applications/luci-app-adguardhome ../package/lean//luci-app-adguardhome
+#git clone --depth=1 -b openwrt-23.05 https://github.com/immortalwrt/packages
+#git clone --depth=1 -b openwrt-23.05 https://github.com/immortalwrt/luci
+#cp -r ../luci/applications/luci-app-adguardhome ../package/lean//luci-app-adguardhome
+
+#git clone --depth=1 https://github.com/AdguardTeam/AdGuardHome.git luci-app-adguardhome
+
 
 # Add luci-app-passwall
 #git clone --depth=1 https://github.com/SamShum-June/openwrt-passwall
@@ -53,11 +81,6 @@ git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
 # Add luci-app-onliner
 #git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
 
-
-# Add luci-app-dockerman
-#rm -rf ../lean/luci-app-docker
-#git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
-#git clone --depth=1 https://github.com/lisaac/luci-lib-docker
 
 # Add luci-theme-argon
 #git clone --depth=1 -b master https://github.com/jerrykuku/luci-theme-argon
