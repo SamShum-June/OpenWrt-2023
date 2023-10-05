@@ -13,6 +13,22 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
 
+# Add luci-theme-argon
+pushd ./luci/themes
+rm -rf ./luci-theme-argon
+git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon
+pushd ./luci-theme-argon
+rm -rf ./RELEASE_ZH.md RELEASE.md README_ZH.md README.md LICENSE .gitignore .git .github
+popd
+popd
+ln -sf ../../../luci/themes/luci-theme-argon ./package/feeds/luci/
+ln -sf ../../../luci/themes/luci-theme-bootstrap-mod ./package/feeds/luci/
+ln -sf ../../../luci/applications/luci-app-autoreboot ./package/feeds/luci/
+ln -sf ../../../luci/applications/luci-app-cifs-mount ./package/feeds/luci/
+ln -sf ../../../luci/applications/luci-app-rclone ./package/feeds/luci/
+ln -sf ../../../luci/applications/luci-app-webadmin ./package/feeds/luci/
+ln -sf ../../../luci/applications/luci-app-zerotier ./package/feeds/luci/
+
 # Add luci-app-ssr-plus
 pushd ./package/feeds
 ##git clone --depth=1 https://github.com/SamShum-June/helloworld
