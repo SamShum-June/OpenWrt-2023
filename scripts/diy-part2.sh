@@ -41,11 +41,11 @@ git clone --depth=1 https://github.com/Lienol/openwrt-package openwrt-package
 rm -rf ./openwrt-package/luci-app-kodexplorer
 
 # Add luci-app-passwall
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall openwrt-passwall
 
 # Add luci-app-dockerman
-git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
-git clone --depth=1 https://github.com/lisaac/luci-lib-docker
+#git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
+#git clone --depth=1 https://github.com/lisaac/luci-lib-docker
 
 # Add immortalwrt's Packages
 #git clone --depth=1 https://github.com/AdguardTeam/AdGuardHome.git luci-app-adguardhome
