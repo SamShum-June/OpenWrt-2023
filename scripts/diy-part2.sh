@@ -76,3 +76,4 @@ git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall openwrt-passwa
 # Change default shell to zsh
 #sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 
+
