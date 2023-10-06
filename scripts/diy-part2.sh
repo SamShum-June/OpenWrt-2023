@@ -43,14 +43,6 @@ rm -rf ./openwrt-package/luci-app-kodexplorer
 # Add luci-app-passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall openwrt-passwall
 
-# Add luci-app-dockerman
-#git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
-#git clone --depth=1 https://github.com/lisaac/luci-lib-docker
-
-# Add immortalwrt's Packages
-#git clone --depth=1 https://github.com/AdguardTeam/AdGuardHome.git luci-app-adguardhome
-
-
 # Add luci-app-passwall
 #git clone --depth=1 https://github.com/SamShum-June/openwrt-passwall
 #git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
@@ -72,31 +64,14 @@ git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall openwrt-passwa
 #git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
 
 
-# Add luci-theme-argon
-#git clone --depth=1 -b master https://github.com/jerrykuku/luci-theme-argon
-#git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
-#rm -rf ../lean/luci-theme-argon
-
 # Add subconverter
 #git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
-
-
-# Add OpenAppFilter
-#git clone --depth 1 -b oaf-3.0.1 https://github.com/destan19/OpenAppFilter.git
-
-
 
 # Mod zzz-default-settings
 #pushd package/lean/default-settings/files
 #sed -i '/http/d' zzz-default-settings
 #export orig_version="$(cat "zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')"
 #sed -i "s/${orig_version}/${orig_version} ($(date +"%Y-%m-%d"))/g" zzz-default-settings
-#popd
-
-
-# Fix mt76 wireless driver
-#pushd package/kernel/mt76
-#sed -i '/mt7662u_rom_patch.bin/a\\techo mt76-usb disable_usb_sg=1 > $\(1\)\/etc\/modules.d\/mt76-usb' Makefile
 #popd
 
 # Change default shell to zsh
