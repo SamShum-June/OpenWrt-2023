@@ -15,7 +15,8 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add feed sources
 sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package'
-
+sed -i '$a src-git helloworld https://github.com/fw876/helloworld'
+sed -i '$a src-git openwrt-passwall https://github.com/xiaorouji/openwrt-passwall'
 
 # Svn checkout packages from immortalwrt's repository
 git clone --depth=1 -b openwrt-23.05 https://github.com/immortalwrt/packages
@@ -31,5 +32,4 @@ rm -rf ./RELEASE_ZH.md RELEASE.md README_ZH.md README.md LICENSE .gitignore .git
 popd
 popd
 
-sed -i '$a src-git helloworld https://github.com/fw876/helloworld'
-sed -i '$a src-git openwrt-passwall https://github.com/xiaorouji/openwrt-passwall'
+
