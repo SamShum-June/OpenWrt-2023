@@ -28,6 +28,7 @@ ln -sf ../../../luci/applications/luci-app-cifs-mount ./package/feeds/luci/
 ln -sf ../../../luci/applications/luci-app-rclone ./package/feeds/luci/
 ln -sf ../../../luci/applications/luci-app-webadmin ./package/feeds/luci/
 ln -sf ../../../luci/applications/luci-app-zerotier ./package/feeds/luci/
+ln -sf ../../../packages/net/dns-forwarder ./package/feeds/packages/
 
 # Add luci-app-ssr-plus
 pushd ./package/feeds
@@ -45,16 +46,16 @@ pushd ./community
 popd
 
 # Add luci-app-dockerman
-rm -rf ./luci/luci-lib-docker
-rm -rf ./luci/luci-app-dockerman
-pushd ./community
+#rm -rf ./luci/luci-lib-docker
+#rm -rf ./luci/luci-app-dockerman
+#pushd ./community
 #git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
-git clone --depth=1 https://github.com/lisaac/luci-lib-docker
-popd
-popd
-popd
-ln -sf ../../.././package/feeds/community/luci-lib-docker/collections/luci-lib-docker ./package/feeds/luci/
-ln -sf ../../.././package/feeds/community/luci-app-dockerman/applications/luci-app-dockerman ./package/feeds/luci/
+#git clone --depth=1 https://github.com/lisaac/luci-lib-docker
+#popd
+#popd
+#popd
+#ln -sf ../../.././package/feeds/community/luci-lib-docker/collections/luci-lib-docker ./package/feeds/luci/
+#ln -sf ../../.././package/feeds/community/luci-app-dockerman/applications/luci-app-dockerman ./package/feeds/luci/
 
 # Add luci-app-passwall
 pushd ./package/feeds/community
