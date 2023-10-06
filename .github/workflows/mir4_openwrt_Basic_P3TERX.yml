@@ -10,7 +10,7 @@ on:
       ssh:
         description: 'SSH connection to Actions'
         required: false
-        default: 'true'  #'false'
+        default: 'false' #'true' #'false'
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt
