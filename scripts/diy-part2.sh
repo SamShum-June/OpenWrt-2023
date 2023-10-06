@@ -41,9 +41,9 @@ git clone --depth=1 https://github.com/Lienol/openwrt-package openwrt-package
 rm -rf ./openwrt-package/luci-app-kodexplorer
 
 # Clone community packages to package/community
-mkdir -p ./community
-pushd ./community
-popd
+#mkdir -p ./community
+#pushd ./community
+#popd
 
 # Add luci-app-dockerman
 #rm -rf ./luci/luci-lib-docker
@@ -58,14 +58,14 @@ popd
 #ln -sf ../../.././package/feeds/community/luci-app-dockerman/applications/luci-app-dockerman ./package/feeds/luci/
 
 # Add luci-app-passwall
-pushd ./package/feeds/community
+#pushd ./package/feeds/community
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
-popd
-popd
-popd
-popd
-popd
-ln -sf ../../.././package/feeds/community/openwrt-passwall/luci-app-passwall ./package/feeds/luci/
+#popd
+#popd
+#popd
+#popd
+#popd
+#ln -sf ../../.././package/feeds/community/openwrt-passwall/luci-app-passwall ./package/feeds/luci/
 
 
 

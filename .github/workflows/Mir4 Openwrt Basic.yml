@@ -10,7 +10,7 @@ on:
       ssh:
         description: 'SSH connection to Actions'
         required: false
-        default: 'false'
+        default: 'true'  #'false'
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt
@@ -33,7 +33,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04 #macubuntu  #vbubuntu
+    runs-on: ubuntu-20.04
     
 
     steps:
