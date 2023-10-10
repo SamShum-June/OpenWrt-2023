@@ -16,7 +16,8 @@ sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_genera
 # Add luci-theme-argon
 pushd ./luci/themes
 rm -rf ./luci-theme-argon
-git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon
+#git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon
+git clone --depth=1 https://github.com/SamShum-June/luci-theme-argon.git
 pushd ./luci-theme-argon
 rm -rf ./RELEASE_ZH.md RELEASE.md README_ZH.md README.md LICENSE .gitignore .git .github
 popd
@@ -32,17 +33,18 @@ ln -sf ../../../packages/net/dns-forwarder ./package/feeds/packages/
 
 # Add luci-app-ssr-plus
 pushd ./package/feeds
-##git clone --depth=1 https://github.com/SamShum-June/helloworld
-git clone --depth=1 https://github.com/fw876/helloworld helloworld
+#git clone --depth=1 https://github.com/fw876/helloworld helloworld
+git clone --depth=1 https://github.com/SamShum-June/helloworld.git helloworld
 #rm -rf ./helloworld/luci-app-naiveproxy
 
 # Add Lienol's Packages
-git clone --depth=1 https://github.com/Lienol/openwrt-package openwrt-package
+#git clone --depth=1 https://github.com/Lienol/openwrt-package openwrt-package
+git clone --depth=1 https://github.com/SamShum-June/openwrt-package.git openwrt-package
 ##rm -rf ./openwrt-package/luci-app-kodexplorer
 
 # Add luci-app-passwall
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall openwrt-passwall
-
+#git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall openwrt-passwall
+git clone --depth=1 https://github.com/SamShum-June/openwrt-passwall.git openwrt-passwall
 
 
 
