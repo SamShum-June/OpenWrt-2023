@@ -13,39 +13,26 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
 
-# Add luci-theme-argon
-#pushd ./luci/themes
-#rm -rf ./luci-theme-argon
-#git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon
-#git clone --depth=1 https://github.com/SamShum-June/luci-theme-argon.git
-#pushd ./luci-theme-argon
-#rm -rf ./RELEASE_ZH.md RELEASE.md README_ZH.md README.md LICENSE .gitignore .git .github
-#popd
-#popd
-#ln -sf ../../../luci/themes/luci-theme-argon ./package/feeds/luci/
-#ln -sf ../../../luci/themes/luci-theme-bootstrap-mod ./package/feeds/luci/
-#ln -sf ../../../luci/applications/luci-app-autoreboot ./package/feeds/luci/
-#ln -sf ../../../luci/applications/luci-app-cifs-mount ./package/feeds/luci/
-#ln -sf ../../../luci/applications/luci-app-rclone ./package/feeds/luci/
-#ln -sf ../../../luci/applications/luci-app-webadmin ./package/feeds/luci/
-#ln -sf ../../../luci/applications/luci-app-zerotier ./package/feeds/luci/
-#ln -sf ../../../packages/net/dns-forwarder ./package/feeds/packages/
-
-# Add luci-app-ssr-plus
-#pushd ./package/feeds
-#git clone --depth=1 https://github.com/fw876/helloworld helloworld
-#git clone --depth=1 https://github.com/SamShum-June/helloworld.git helloworld
-#rm -rf ./helloworld/luci-app-naiveproxy
+sed -i 's/depends on PACKAGE_python3-pymysql/#depends on PACKAGE_python3-pymysql/g' feeds/packages/lang/python/pymysql/Config.in
+sed -i 's/PKG_RELEASE:=1/PKG_RELEASE:=2/g' feeds/packages/lang/python/pymysql/Makefile
 
 # Add Lienol's Packages
-#git clone --depth=1 https://github.com/Lienol/openwrt-package openwrt-package
-#git clone --depth=1 https://github.com/SamShum-June/openwrt-package.git openwrt-package
-##rm -rf ./openwrt-package/luci-app-kodexplorer
+pushd ./package/feeds
+git clone --depth=1 https://github.com/Lienol/openwrt-package openwrt-package
+
+# Add luci-app-ssr-plus
+git clone --depth=1 https://github.com/SamShum-June/helloworld.git helloworld
+rm -rf ./helloworld/v2ray-plugin
 
 # Add luci-app-passwall
-#git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall openwrt-passwall
-#git clone --depth=1 https://github.com/SamShum-June/openwrt-passwall.git openwrt-passwall
-#git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages.git passwall_packages 
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages.git passwall_packages
+git clone --depth=1 https://github.com/SamShum-June/openwrt-passwall.git openwrt-passwall1
+mv  ./openwrt-passwall1/luci-app-passwall ./luci/ 
+rm -rf ./openwrt-passwall1
+popd
+
+
+
 
 
 # Add luci-app-vssr <M>
