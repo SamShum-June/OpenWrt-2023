@@ -23,8 +23,8 @@ git clone --depth=1 -b openwrt-23.05 https://github.com/immortalwrt/luci
 # Add luci-theme-argon
 pushd ./luci/themes
 rm -rf ./luci-theme-argon
-git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon
-#git clone --depth=1 https://github.com/SamShum-June/luci-theme-argon.git
+git clone --depth=1 https://github.com/SamShum-June/luci-theme-argon #https://github.com/jerrykuku/luci-theme-argon
+
 pushd ./luci-theme-argon
 rm -rf ./RELEASE_ZH.md RELEASE.md README_ZH.md README.md LICENSE .gitignore .git .github
 popd
