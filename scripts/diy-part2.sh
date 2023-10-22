@@ -21,8 +21,8 @@ pushd ./package/feeds
 git clone --depth=1 https://github.com/Lienol/openwrt-package openwrt-package
 
 # Add luci-app-ssr-plus
-##git clone --depth=1 https://github.com/SamShum-June/helloworld.git helloworld
-##rm -rf ./helloworld/v2ray-plugin
+git clone --depth=1 https://github.com/SamShum-June/helloworld.git helloworld
+rm -rf ./helloworld/v2ray-plugin
 
 # Add luci-app-passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages.git passwall_packages
