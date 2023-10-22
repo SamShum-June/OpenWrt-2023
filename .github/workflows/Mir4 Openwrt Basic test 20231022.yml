@@ -16,7 +16,6 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false' #'true' #'false'
-      pull_request:
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt
