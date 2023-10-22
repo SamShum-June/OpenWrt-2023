@@ -3,6 +3,11 @@
 
 name: Mir4 Openwrt Basic test 20231022 
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+
 on:
   repository_dispatch:
   workflow_dispatch:
@@ -11,6 +16,7 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false' #'true' #'false'
+      pull_request:
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt
